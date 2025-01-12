@@ -1,0 +1,32 @@
+classDiagram
+    abstract class Shape {
+        + surfaceArea() : double
+        + volume() : double
+        toString()
+    }
+    class Sphere extends Shape {
+        - radius : double
+        + Sphere(radius : double)
+        + surfaceArea() : double
+        + volume() : double
+    }
+    class Cylinder extends Shape {
+        - radius : double
+        - height : double
+        + Cylinder(radius : double, height : double)
+        + surfaceArea() : double
+        + volume() : double
+    }
+    class Cone extends Shape {
+        - radius : double
+        - height : double
+        + Cone(radius : double, height : double)
+        + surfaceArea() : double
+        + volume() : double
+    }
+    class ShapeArray {
+        static void main(String[] args)
+    }
+    Shape <|-- Sphere
+    Shape <|-- Cylinder
+    Shape <|-- Cone
